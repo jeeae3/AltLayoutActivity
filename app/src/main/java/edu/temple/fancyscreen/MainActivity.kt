@@ -21,15 +21,13 @@ class MainActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.name).setText("Michelle Townsend")
 
         with(findViewById<TextView>(R.id.email)) {
-            text = "mt@ourcompany.com"
+            setText(R.string.email)
             setTextColor(Color.BLUE)
         }
 
-        findViewById<TextView>(R.id.extension).text = "2253"
-
-        findViewById<TextView>(R.id.department).text = "Design"
-
-        findViewById<TextView>(R.id.supervisor).text = "Gail Davers"
+        findViewById<TextView>(R.id.extension).setText(R.string.extension)
+        findViewById<TextView>(R.id.department).setText(R.string.department)
+        findViewById<TextView>(R.id.supervisor).setText(R.string.supervisor)
 
         with (findViewById<RecyclerView>(R.id.directReportsRecyclerView)) {
             adapter = RecyclerViewAdapter(
